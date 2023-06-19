@@ -3,7 +3,8 @@ class_name Player extends Node2D
 var hp = 10
 
 signal died() # define signal
-signal hurt(hp_old, hp_new) # signals can take arguments
+signal hurt(hp_old, hp_new) # signals can take arguments. Note that typed arguments aren't actually enforced; at runtime, however,
+							# values passed from signals to typed function arguments will be enforced.
 
 func apply_damage(dmg):
 	var hp_old = hp
